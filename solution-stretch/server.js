@@ -44,4 +44,10 @@ function sessions(req, res, next) {
   next();
 }
 
+function protect(req, res, next) {
+  if (req.session) {
+    next();
+  }
+}
+
 module.exports = server;
